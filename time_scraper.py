@@ -68,7 +68,7 @@ def extract_stories(html):
                 
                 if path_start != -1:
                     path_start += len(path_marker)
-                    # Find the closing quote for path
+   
                     path_end = path_start
                     while path_end < len(html):
                         if html[path_end] == '\\' and path_end + 1 < len(html) and html[path_end + 1] == '"':
@@ -78,8 +78,7 @@ def extract_stories(html):
                     if path_end < len(html):
                         path = html[path_start:path_end]
                         
-                        # Clean up the path - remove ALL backslash escapes (may be double-escaped)
-                        # First pass: remove one layer of escaping
+                    
                         clean_path = []
                         i = 0
                         while i < len(path):
@@ -93,7 +92,7 @@ def extract_stories(html):
                                 clean_path.append(path[i])
                                 i += 1
                         
-                        # Second pass: clean again if still has backslashes
+                      
                         first_clean = ''.join(clean_path)
                         final_path = []
                         i = 0
