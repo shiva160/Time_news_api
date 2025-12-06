@@ -88,11 +88,6 @@ Run the test script to verify functionality:
 python3 test_scraper.py
 ```
 
-Run the full verification:
-
-```bash
-./final_verification.sh
-```
 
 ## 🛠️ Technical Details
 
